@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation — Selam &amp; Birhanu</title>
+  <meta name="description" content="You are invited to celebrate the wedding of Selam and Birhanu. 26 September 2026 at Hyatt Regency." />
+  <meta name="theme-color" content="#f8f5f0" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wedding Invitation — Selam &amp; Birhanu" />
+  <meta property="og:description" content="You are invited to celebrate with us on 26 September 2026." />
+  <meta property="og:image" content="assets/images/hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wedding Invitation — Selam &amp; Birhanu" />
+  <meta name="twitter:description" content="You are invited to celebrate with us on 26 September 2026." />
+  <meta name="twitter:image" content="assets/images/hero.png" />
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Libre+Baskerville:wght@400;700&family=Allura&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="invitation-locked">
+  <div class="invitation-opening" id="invitation-opening" role="dialog" aria-modal="true" aria-label="Open wedding invitation">
+    <div class="envelope-fold envelope-fold-left" aria-hidden="true"></div>
+    <div class="envelope-fold envelope-fold-right" aria-hidden="true"></div>
+    <div class="envelope-fold envelope-fold-bottom" aria-hidden="true"></div>
+
+    <div class="opening-content">
+      <button class="gold-seal" id="open-invitation" type="button" aria-label="Open wedding invitation">
+        <span class="seal-ring" aria-hidden="true"></span>
+        <span class="seal-inner" aria-hidden="true"></span>
+        <span class="seal-monogram">S<span>&amp;</span>B</span>
+      </button>
+      <p class="opening-hint">Tap to open</p>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#home">Skip to invitation</a>
+
+  <main class="wedding-shell" id="invitation">
+
+    <section class="hero-section" id="home" aria-label="Wedding invitation">
+      <div class="hero-soft-bg" aria-hidden="true"></div>
+      <div class="hero-botanical hero-botanical-left" aria-hidden="true"></div>
+      <div class="hero-botanical hero-botanical-right" aria-hidden="true"></div>
+
+      <div class="hero-copy hero-enter">
+        <p class="hero-pretitle hero-amharic-title">ሠርግ</p>
+
+        <h1>
+          <span class="hero-name" data-bind="brideAmharic">ሰላም</span>
+          <span class="hero-and">&amp;</span>
+          <span class="hero-name" data-bind="groomAmharic">ብርሃኑ</span>
+        </h1>
+
+        <div class="hero-divider" aria-hidden="true">
+          <i></i>
+          <span>✦</span>
+          <i></i>
+        </div>
+
+        <div class="hero-subtitle hero-amharic-verse">
+          <p data-bind="heroVerse">እግዚአብሄር መልካም ነገር አደረገልን ደስም አለን</p>
+          <span data-bind="heroVerseRef">መዝ 125(126)፥3</span>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap hero-photo-enter">
+        <div class="hero-photo-frame" aria-hidden="true"></div>
+        <img
+          src="assets/images/hero.png"
+          alt="The couple walking hand in hand across a green hillside beside a lake"
+          class="hero-photo"
+          width="1600"
+          height="1067"
+          fetchpriority="high"
+        />
+        <div class="hero-photo-overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-bottom-note hero-enter hero-enter-last">
+        <span data-bind="heroBottomScript">Our forever begins here</span>
+        <p data-bind="heroBottomNote">We would be honored to celebrate<br />this beautiful day with you.</p>
+      </div>
+    </section>
+
+    <section class="scratch-date-section" id="date" aria-labelledby="date-heading">
+      <div class="scratch-date-inner">
+        <div class="scratch-heading scroll-up">
+          <span class="scratch-script">The</span>
+          <h2 id="date-heading">Date</h2>
+          <p id="scratch-intro">Scratch each card to reveal our wedding date</p>
+        </div>
+
+        <div class="scratch-cards" id="scratchCards">
+          <div class="scratch-card" data-scratch-card>
+            <div class="scratch-value">
+              <strong data-bind="weddingDay">26</strong>
+              <small>Day</small>
+            </div>
+            <canvas class="scratch-canvas" aria-label="Scratch to reveal the day"></canvas>
+          </div>
+
+          <div class="scratch-card" data-scratch-card>
+            <div class="scratch-value scratch-value-month">
+              <strong data-bind="weddingMonth">September</strong>
+              <small>Month</small>
+            </div>
+            <canvas class="scratch-canvas" aria-label="Scratch to reveal the month"></canvas>
+          </div>
+
+          <div class="scratch-card" data-scratch-card>
+            <div class="scratch-value">
+              <strong data-bind="weddingYear">2026</strong>
+              <small>Year</small>
+            </div>
+            <canvas class="scratch-canvas" aria-label="Scratch to reveal the year"></canvas>
+          </div>
+        </div>
+
+        <p class="scratch-hint" id="scratchHint">Swipe your finger over the cards</p>
+        <button type="button" class="text-button" id="reveal-date-btn">Reveal date</button>
+        <p class="sr-only" id="date-live" aria-live="polite"></p>
+
+        <div class="revealed-countdown" id="revealedCountdown">
+          <span class="countdown-script">Until</span>
+          <h3>Our Wedding Day</h3>
+          <div class="countdown-grid" aria-label="Countdown to the wedding">
+            <div>
+              <strong id="count-days">00</strong>
+              <span>Days</span>
+            </div>
+            <div>
+              <strong id="count-hours">00</strong>
+              <span>Hours</span>
+            </div>
+            <div>
+              <strong id="count-mins">00</strong>
+              <span>Minutes</span>
+            </div>
+            <div>
+              <strong id="count-secs">00</strong>
+              <span>Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="invitation-section" aria-labelledby="invited-heading">
+      <div class="invitation-inner">
+        <div class="invitation-heading scroll-up">
+          <span class="invitation-script">You're</span>
+          <h2 id="invited-heading">Invited</h2>
+          <div class="invitation-divider" aria-hidden="true">
+            <i></i>
+            <span>✦</span>
+            <i></i>
+          </div>
+        </div>
+
+        <div class="invitation-paper scroll-left">
+          <span class="invitation-small">With Joy In Our Hearts</span>
+          <h3>
+            <span data-bind="brideAmharic">ሰላም</span>
+            &amp;
+            <span data-bind="groomAmharic">ብርሃኑ</span>
+          </h3>
+          <p class="invitation-amharic-message" data-bind="invitationAmharic">
+            እንደ እግዚአብሄር ፍቃድ በ መስከረም 16-2018 ዓ.ም<br />
+            ከምሽቱ 12 ሰዓት በ ሃያት ሬጀንሲ ባዘጋጀነው<br />
+            የእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ<br />
+            ይሆኑ ዘንድ በማክበር ጋብዘኖታል
+          </p>
+          <div class="invitation-paper-divider" aria-hidden="true">
+            <i></i>
+            <span>♥</span>
+            <i></i>
+          </div>
+          <strong data-bind="weddingDateLong">September 26, 2026</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="venue-section" aria-labelledby="venue-heading">
+      <div class="venue-inner">
+        <div class="venue-heading scroll-up">
+          <span class="venue-script">The</span>
+          <h2 id="venue-heading">Venue</h2>
+          <div class="venue-divider" aria-hidden="true">
+            <i></i>
+            <span>✦</span>
+            <i></i>
+          </div>
+        </div>
+
+        <div class="venue-photo-wrap scroll-up">
+          <img
+            src="assets/images/venue.png"
+            alt="Hyatt Regency hotel exterior"
+            class="venue-photo"
+            width="1600"
+            height="1000"
+            loading="lazy"
+          />
+          <div class="venue-photo-frame" aria-hidden="true"></div>
+          <div class="venue-photo-caption">
+            <span>Wedding Reception</span>
+            <strong data-bind="venue">Hyatt Regency</strong>
+          </div>
+        </div>
+
+        <div class="venue-info-card scroll-up">
+          <div class="venue-pin" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+              <circle cx="12" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+            </svg>
+          </div>
+          <h3 data-bind="venue">Hyatt Regency</h3>
+          <p data-bind="address">Addis Ababa, Ethiopia</p>
+
+          <a class="venue-map-button" id="directions-btn" href="#" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.7"></path>
+              <circle cx="12" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"></circle>
+            </svg>
+            <span>View On Google Maps</span>
+          </a>
+        </div>
+
+        <div class="classic-map-card scroll-up">
+          <div class="map-frame">
+            <iframe
+              id="venue-map"
+              title="Map of the wedding venue"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Hyatt%20Regency%20Addis%20Ababa&output=embed"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rsvp-section" aria-labelledby="rsvp-heading">
+      <div class="rsvp-inner">
+        <div class="rsvp-heading scroll-up">
+          <span class="rsvp-script">Will You</span>
+          <h2 id="rsvp-heading">Join Us?</h2>
+          <div class="rsvp-divider" aria-hidden="true">
+            <i></i>
+            <span>♥</span>
+            <i></i>
+          </div>
+          <p class="rsvp-intro">Please let us know if you will be<br />celebrating our special day with us.</p>
+        </div>
+
+        <form class="rsvp-form scroll-up" id="rsvp-form" novalidate>
+          <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="rsvp-field">
+            <label for="guest-name">Your Name</label>
+            <input id="guest-name" name="guest_name" type="text" autocomplete="name" maxlength="80" placeholder="Enter your name" required />
+          </div>
+
+          <div class="rsvp-field">
+            <label for="guest-email">Email address</label>
+            <input id="guest-email" name="guest_email" type="email" autocomplete="email" maxlength="120" placeholder="Enter your email" required />
+          </div>
+
+          <div class="rsvp-field">
+            <label>Will you attend?</label>
+            <div class="rsvp-options">
+              <label class="rsvp-option">
+                <input type="radio" name="attending" value="Joyfully attending" required />
+                <span>
+                  <strong>Attending</strong>
+                  <small>With pleasure</small>
+                </span>
+              </label>
+              <label class="rsvp-option">
+                <input type="radio" name="attending" value="Respectfully decline" />
+                <span>
+                  <strong>Not Attending</strong>
+                  <small>With regrets</small>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="rsvp-field">
+            <label for="guest-count">Guests</label>
+            <input id="guest-count" name="guest_count" type="number" min="1" max="12" value="1" />
+          </div>
+
+          <div class="rsvp-field">
+            <label for="guest-message">Message</label>
+            <textarea id="guest-message" name="message" rows="4" maxlength="800" placeholder="Write a little message for ሰላም &amp; ብርሃኑ" required></textarea>
+          </div>
+
+          <p class="rsvp-response" id="form-status" role="status" aria-live="polite"></p>
+
+          <button class="rsvp-submit" type="submit" id="submit-btn">
+            <span>Send RSVP</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 12h15M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="wedding-footer">
+      <div class="footer-decoration footer-decoration-left" aria-hidden="true"></div>
+      <div class="footer-decoration footer-decoration-right" aria-hidden="true"></div>
+
+      <div class="footer-inner">
+        <div class="footer-heart scroll-up">♥</div>
+        <p class="footer-small scroll-up">With Love</p>
+        <h2 class="footer-names scroll-up" id="footer-names">
+          ሰላም
+          <span>&amp;</span>
+          ብርሃኑ
+        </h2>
+        <div class="footer-divider scroll-up" aria-hidden="true">
+          <i></i>
+          <span>✦</span>
+          <i></i>
+        </div>
+        <p class="footer-message scroll-up" data-bind="closingMessage">Thank you for being part of<br />this beautiful beginning.</p>
+        <strong class="footer-date scroll-up" data-bind="weddingDateLong">September 26, 2026</strong>
+      </div>
+    </footer>
+
+  </main>
+
+  <audio id="wedding-audio" preload="auto" loop playsinline></audio>
+  <button type="button" class="music-toggle" id="music-toggle" aria-label="Play wedding music" aria-pressed="false">
+    <svg class="music-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M9 18V6.4l10-1.9V16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="7" cy="18" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+      <circle cx="17" cy="16" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+    </svg>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
