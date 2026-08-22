@@ -15,32 +15,52 @@
  * ============================================================
  */
 const weddingConfig = {
-  brideName: "Selam",
-  groomName: "Birhanu",
-  brideAmharic: "ሰላም",
-  groomAmharic: "ብርሃኑ",
-  namesAmharic: "ሰላም እና ብርሃኑ",
-  heroVerse: "እግዚአብሄር መልካም ነገር አደረገልን ደስም አለን",
-  heroVerseRef: "መዝ 125(126)፥3",
+  brideName: "ሊዲያ",
+  groomName: "ሙሉሀብት",
+  brideInitial: "L",
+  groomInitial: "M",
+  brideAmharic: "ሊዲያ",
+  groomAmharic: "ሙሉሀብት",
+  namesAmharic: "ሊዲያ እና ሙሉሀብት",
+  heroVerse: "ይሹሩን ሆይ፥ በሰማያት ላይ ለረድኤትህ፥ በደመናትም ላይ በታላቅነት እንደሚሄድ፡ እንደ እግዚአብሔር ያለ ማንም የለም።",
+  heroVerseRef: "ዘዳግም 33:26",
   heroBottomScript: "Our forever begins here",
   heroBottomNote: "We would be honored to celebrate\nthis beautiful day with you.",
   invitationAmharic:
-    "እንደ እግዚአብሄር ፍቃድ በ መስከረም 16-2018 ዓ.ም\nከምሽቱ 12 ሰዓት በ ሃያት ሬጀንሲ ባዘጋጀነው\nየእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ\nይሆኑ ዘንድ በማክበር ጋብዘኖታል",
+    "እንደ እግዚአብሄር ፍቃድ በ መስከረም 16-2019 ዓ.ም\nከምሽቱ 12 ሰዓት በ ሃያት ሬጀንሲ ባዘጋጀነው\nየእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ\nይሆኑ ዘንድ በማክበር ጋብዘኖታል",
   closingMessage: "Thank you for being part of\nthis beautiful beginning.",
 
   weddingDay: "26",
   weddingMonth: "September",
   weddingYear: "2026",
+  ethiopianDate: "16 መስከረም 2019 ዓ.ም",
+  ethiopianDay: "16",
+  ethiopianMonth: "መስከረም",
+  ethiopianYear: "2019 ዓ.ም",
+  gregorianDate: "September 26, 2026",
   weddingIso: "2026-09-26T16:00:00",
-  ceremonyTime: "Ceremony & reception · 4:00 in the afternoon",
-
-  venue: "Hyatt Regency",
-  address: "Addis Ababa, Ethiopia",
-  weddingLocation: "Hyatt Regency Addis Ababa",
-  mapsEmbedUrl: "https://maps.google.com/maps?q=Hyatt%20Regency%20Addis%20Ababa&output=embed",
+  locations: {
+    church: {
+      name: "Holy International Church",
+      address: "Megenagna, Addis Ababa, Ethiopia",
+      image: "",
+      mapEmbedUrl: "https://maps.google.com/maps?q=2R94%2BW76%20Holy%20International%20Church%20Megenagna%20Addis%20Ababa&output=embed",
+      directionsUrl: "https://maps.app.goo.gl/7KtiADEqBRWj5QaR9?g_st=it",
+      directionsDestination: "",
+      time: "9:00 AM – 11:00 AM"
+    },
+    venue: {
+      name: "Hyatt Regency",
+      address: "Addis Ababa, Ethiopia",
+      image: "assets/images/venue.png",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Hyatt%20Regency%20Addis%20Ababa&output=embed",
+      directionsDestination: "Hyatt Regency Addis Ababa",
+      directionsUrl: "",
+      time: "12:00 PM"
+    }
+  },
 
   heroImage: "assets/images/hero.png",
-  venueImage: "assets/images/venue.png",
   audioSrc: "assets/audio/wedding-music.mp3",
 
   /* Replace these three values with your EmailJS credentials */
@@ -51,10 +71,10 @@ const weddingConfig = {
 
 weddingConfig.namesDisplay = `${weddingConfig.brideName} & ${weddingConfig.groomName}`;
 weddingConfig.weddingDateDisplay = `${weddingConfig.weddingDay} ${weddingConfig.weddingMonth} ${weddingConfig.weddingYear}`;
-weddingConfig.weddingDateLong = `${weddingConfig.weddingMonth} ${weddingConfig.weddingDay}, ${weddingConfig.weddingYear}`;
-weddingConfig.directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-  weddingConfig.weddingLocation
-)}`;
+weddingConfig.weddingDateLong = weddingConfig.gregorianDate;
+weddingConfig.venue = weddingConfig.locations.venue.name;
+weddingConfig.address = weddingConfig.locations.venue.address;
+weddingConfig.weddingLocation = weddingConfig.locations.venue.directionsDestination;
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -75,19 +95,64 @@ function applyConfig() {
   const heroPhoto = document.querySelector(".hero-photo");
   if (heroPhoto) heroPhoto.src = weddingConfig.heroImage;
 
-  const venuePhoto = document.querySelector(".venue-photo");
-  if (venuePhoto) venuePhoto.src = weddingConfig.venueImage;
-
-  const map = document.getElementById("venue-map");
-  if (map) map.src = weddingConfig.mapsEmbedUrl;
-
-  const directions = document.getElementById("directions-btn");
-  if (directions) directions.href = weddingConfig.directionsUrl;
+  document.querySelectorAll("[data-location-name]").forEach((el) => {
+    el.textContent = weddingConfig.locations[el.dataset.locationName].name;
+  });
+  document.querySelectorAll("[data-location-address]").forEach((el) => {
+    el.textContent = weddingConfig.locations[el.dataset.locationAddress].address;
+  });
+  document.querySelectorAll("[data-location-image]").forEach((image) => {
+    const location = weddingConfig.locations[image.dataset.locationImage];
+    if (!location.image) return;
+    image.src = location.image;
+    image.hidden = false;
+    image.closest(".location-photo-wrap")?.querySelector("[data-location-image-missing]")?.setAttribute("hidden", "");
+  });
+  document.querySelectorAll("[data-location-directions]").forEach((link) => {
+    const destination = weddingConfig.locations[link.dataset.locationDirections].directionsDestination;
+    link.href = weddingConfig.locations[link.dataset.locationDirections].directionsUrl || (destination
+      ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`
+      : "#");
+  });
 
   const footerNames = document.getElementById("footer-names");
   if (footerNames) {
     footerNames.innerHTML = `${weddingConfig.brideAmharic} <span>&amp;</span> ${weddingConfig.groomAmharic}`;
   }
+
+  const sealMonogram = document.querySelector(".seal-monogram");
+  if (sealMonogram) {
+    sealMonogram.innerHTML = `${weddingConfig.brideInitial}<span>&amp;</span>${weddingConfig.groomInitial}`;
+  }
+}
+
+function initLocations() {
+  const map = document.getElementById("location-map");
+  const directions = document.getElementById("directions-btn");
+  const tabs = document.querySelectorAll("[data-location-tab]");
+  if (!map || !tabs.length) return;
+
+  const selectLocation = (key) => {
+    const location = weddingConfig.locations[key];
+    tabs.forEach((tab) => {
+      const active = tab.dataset.locationTab === key;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    document.querySelectorAll("[data-location-panel]").forEach((panel) => {
+      const active = panel.dataset.locationPanel === key;
+      panel.classList.toggle("is-active", active);
+      panel.hidden = !active;
+    });
+    map.src = location.mapEmbedUrl || "about:blank";
+    map.title = `Map of the ${location.name.toLowerCase()}`;
+    if (directions) directions.href = location.directionsUrl || (location.directionsDestination
+      ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location.directionsDestination)}`
+      : "#");
+  };
+
+  tabs.forEach((tab) => tab.addEventListener("click", () => selectLocation(tab.dataset.locationTab)));
+  selectLocation("venue");
 }
 
 function initReveals() {
@@ -184,8 +249,8 @@ function initScratch() {
       canvas.style.pointerEvents = "none";
     });
 
-    if (hint) hint.textContent = weddingConfig.weddingDateDisplay;
-    if (live) live.textContent = `The wedding date is ${weddingConfig.weddingDateDisplay}.`;
+    if (hint) hint.textContent = weddingConfig.gregorianDate;
+    if (live) live.textContent = `The wedding date is ${weddingConfig.ethiopianDate}, ${weddingConfig.gregorianDate}.`;
 
     window.setTimeout(() => {
       countdown?.classList.add("is-visible");
@@ -487,5 +552,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initScratch();
   initForm();
   initMusic();
+  initLocations();
   initOpeningScreen();
 });

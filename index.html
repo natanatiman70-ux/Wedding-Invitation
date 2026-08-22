@@ -32,7 +32,7 @@
       <button class="gold-seal" id="open-invitation" type="button" aria-label="Open wedding invitation">
         <span class="seal-ring" aria-hidden="true"></span>
         <span class="seal-inner" aria-hidden="true"></span>
-        <span class="seal-monogram">S<span>&amp;</span>B</span>
+        <span class="seal-monogram">L<span>&amp;</span>M</span>
       </button>
       <p class="opening-hint">Tap to open</p>
     </div>
@@ -51,9 +51,9 @@
         <p class="hero-pretitle hero-amharic-title">ሠርግ</p>
 
         <h1>
-          <span class="hero-name" data-bind="brideAmharic">ሰላም</span>
+          <span class="hero-name" data-bind="brideAmharic">ሊዲያ</span>
           <span class="hero-and">&amp;</span>
-          <span class="hero-name" data-bind="groomAmharic">ብርሃኑ</span>
+          <span class="hero-name" data-bind="groomAmharic">ሙሉሀብት</span>
         </h1>
 
         <div class="hero-divider" aria-hidden="true">
@@ -97,24 +97,24 @@
 
         <div class="scratch-cards" id="scratchCards">
           <div class="scratch-card" data-scratch-card>
-            <div class="scratch-value">
-              <strong data-bind="weddingDay">26</strong>
+            <div class="scratch-value scratch-value-ethiopian">
+              <strong data-bind="ethiopianDay">16</strong>
               <small>Day</small>
             </div>
             <canvas class="scratch-canvas" aria-label="Scratch to reveal the day"></canvas>
           </div>
 
           <div class="scratch-card" data-scratch-card>
-            <div class="scratch-value scratch-value-month">
-              <strong data-bind="weddingMonth">September</strong>
+            <div class="scratch-value scratch-value-month scratch-value-ethiopian">
+              <strong data-bind="ethiopianMonth">መስከረም</strong>
               <small>Month</small>
             </div>
             <canvas class="scratch-canvas" aria-label="Scratch to reveal the month"></canvas>
           </div>
 
           <div class="scratch-card" data-scratch-card>
-            <div class="scratch-value">
-              <strong data-bind="weddingYear">2026</strong>
+            <div class="scratch-value scratch-value-ethiopian">
+              <strong data-bind="ethiopianYear">2019 ዓ.ም</strong>
               <small>Year</small>
             </div>
             <canvas class="scratch-canvas" aria-label="Scratch to reveal the year"></canvas>
@@ -128,6 +128,10 @@
         <div class="revealed-countdown" id="revealedCountdown">
           <span class="countdown-script">Until</span>
           <h3>Our Wedding Day</h3>
+          <div class="revealed-dates" aria-label="Wedding date in Ethiopian and Gregorian calendars">
+            <strong data-bind="ethiopianDate">16 መስከረም 2019 ዓ.ም</strong>
+            <span data-bind="gregorianDate">September 26, 2026</span>
+          </div>
           <div class="countdown-grid" aria-label="Countdown to the wedding">
             <div>
               <strong id="count-days">00</strong>
@@ -165,9 +169,9 @@
         <div class="invitation-paper scroll-left">
           <span class="invitation-small">With Joy In Our Hearts</span>
           <h3>
-            <span data-bind="brideAmharic">ሰላም</span>
+            <span data-bind="brideAmharic">ሊዲያ</span>
             &amp;
-            <span data-bind="groomAmharic">ብርሃኑ</span>
+            <span data-bind="groomAmharic">ሙሉሀብት</span>
           </h3>
           <p class="invitation-amharic-message" data-bind="invitationAmharic">
             እንደ እግዚአብሄር ፍቃድ በ መስከረም 16-2018 ዓ.ም<br />
@@ -189,13 +193,44 @@
       <div class="venue-inner">
         <div class="venue-heading scroll-up">
           <span class="venue-script">The</span>
-          <h2 id="venue-heading">Venue</h2>
+          <h2 id="venue-heading">Locations</h2>
           <div class="venue-divider" aria-hidden="true">
             <i></i>
             <span>✦</span>
             <i></i>
           </div>
         </div>
+
+        <div class="location-switcher scroll-up" role="tablist" aria-label="Wedding locations">
+          <button class="location-tab" id="church-tab" type="button" role="tab" aria-selected="false" aria-controls="church-location" data-location-tab="church">Church</button>
+          <button class="location-tab is-active" id="venue-tab" type="button" role="tab" aria-selected="true" aria-controls="venue-location" data-location-tab="venue">Venue</button>
+        </div>
+
+        <div class="location-panel" id="church-location" role="tabpanel" aria-labelledby="church-tab" data-location-panel="church" hidden>
+          <div class="venue-photo-wrap location-photo-wrap">
+            <img class="venue-photo location-photo" data-location-image="church" alt="Church ceremony location" width="1600" height="1000" loading="lazy" hidden />
+            <div class="location-photo-missing" data-location-image-missing="church">Church photo coming soon</div>
+            <div class="venue-photo-frame" aria-hidden="true"></div>
+            <div class="venue-photo-caption">
+              <span>Wedding Ceremony</span>
+              <strong data-location-name="church">Church</strong>
+            </div>
+          </div>
+          <div class="venue-info-card">
+            <div class="venue-pin" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.6"></path><circle cx="12" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"></circle></svg>
+            </div>
+            <h3 data-location-name="church">Church</h3>
+            <p data-location-address="church">Church location to be confirmed</p>
+            <p class="venue-time">Wedding Ceremony · 9:00 AM – 11:00 AM</p>
+            <a class="venue-map-button" data-location-directions="church" href="#" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.7"></path><circle cx="12" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"></circle></svg>
+              <span>View On Google Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="location-panel is-active" id="venue-location" role="tabpanel" aria-labelledby="venue-tab" data-location-panel="venue">
 
         <div class="venue-photo-wrap scroll-up">
           <img
@@ -222,6 +257,7 @@
           </div>
           <h3 data-bind="venue">Hyatt Regency</h3>
           <p data-bind="address">Addis Ababa, Ethiopia</p>
+          <p class="venue-time">Reception · Afternoon Program · 12:00 PM</p>
 
           <a class="venue-map-button" id="directions-btn" href="#" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -232,10 +268,12 @@
           </a>
         </div>
 
+        </div>
+
         <div class="classic-map-card scroll-up">
           <div class="map-frame">
             <iframe
-              id="venue-map"
+              id="location-map"
               title="Map of the wedding venue"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -299,7 +337,7 @@
 
           <div class="rsvp-field">
             <label for="guest-message">Message</label>
-            <textarea id="guest-message" name="message" rows="4" maxlength="800" placeholder="Write a little message for ሰላም &amp; ብርሃኑ" required></textarea>
+            <textarea id="guest-message" name="message" rows="4" maxlength="800" placeholder="Write a little message for ሊዲያ &amp; ሙሉሀብት" required></textarea>
           </div>
 
           <p class="rsvp-response" id="form-status" role="status" aria-live="polite"></p>
@@ -322,9 +360,9 @@
         <div class="footer-heart scroll-up">♥</div>
         <p class="footer-small scroll-up">With Love</p>
         <h2 class="footer-names scroll-up" id="footer-names">
-          ሰላም
+          ሊዲያ
           <span>&amp;</span>
-          ብርሃኑ
+          ሙሉሀብት
         </h2>
         <div class="footer-divider scroll-up" aria-hidden="true">
           <i></i>
@@ -333,6 +371,10 @@
         </div>
         <p class="footer-message scroll-up" data-bind="closingMessage">Thank you for being part of<br />this beautiful beginning.</p>
         <strong class="footer-date scroll-up" data-bind="weddingDateLong">September 26, 2026</strong>
+        <a class="creator-credit scroll-up" href="https://nethinim.pixieset.com/" target="_blank" rel="noopener noreferrer" aria-label="Website designed by NETHINIM HABTAMU, opens in a new tab">
+          <img src="assets/images/Logo.jpg" alt="NETHINIM HABTAMU logo" class="creator-logo" width="72" height="72" />
+          <span>Website designed by NETHINIM HABTAMU</span>
+        </a>
       </div>
     </footer>
 
