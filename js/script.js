@@ -429,12 +429,16 @@ function initForm() {
       form.elements.guest_count.value = "1";
       setStatus("Thank you. Your message has been received.", "is-success");
     } catch (error) {
-      console.error("EmailJS send failed:", {
+      const errorDetails = {
         status: error?.status,
         text: error?.text,
         message: error?.message
-      });
-      setStatus("Your message could not be sent. Please try again.", "is-error");
+      };
+      console.error("EmailJS send failed:", errorDetails);
+      setStatus(
+        errorDetails.text || errorDetails.message || "Your message could not be sent. Please try again.",
+        "is-error"
+      );
     } finally {
       submitBtn.disabled = false;
       submitBtn.querySelector("span").textContent = "Send RSVP";
