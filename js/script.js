@@ -8,10 +8,7 @@
  * EmailJS dashboard setup:
  * 1. Create a service and template.
  * 2. Paste your PUBLIC key, service ID, and template ID below.
- * 3. Set the template "To Email" to the couple's inbox
- *    (current test destination: yelewnethinim@gmail.com).
- *    Keep that address in the EmailJS dashboard — it is never
- *    shown on the visible website.
+ * 3. Set the template "To Email" field to {{to_email}}.
  * ============================================================
  */
 const weddingConfig = {
@@ -64,10 +61,10 @@ const weddingConfig = {
   audioSrc: "assets/audio/wedding-music.mp3",
 
   /* Replace these three values with your EmailJS credentials */
-  emailjsPublicKey: "YOUR_EMAILJS_PUBLIC_KEY",
-  emailjsServiceId: "YOUR_EMAILJS_SERVICE_ID",
-  emailjsTemplateId: "YOUR_EMAILJS_TEMPLATE_ID",
-  emailjsReceiver: "yelewnethinim@gmail.com"
+  emailjsPublicKey: "WHkA8mmJsUks5JoI6",
+  emailjsServiceId: "service_yj3pj8a",
+  emailjsTemplateId: "template_aatnmta",
+  emailjsReceiver: "natanimhabtamu25@gmail.com"
 };
 
 weddingConfig.namesDisplay = `${weddingConfig.groomName} & ${weddingConfig.brideName}`;
@@ -346,12 +343,13 @@ function setStatus(message, type) {
 }
 
 function credentialsReady() {
-  const { emailjsPublicKey, emailjsServiceId, emailjsTemplateId } = weddingConfig;
+  const { emailjsPublicKey, emailjsServiceId, emailjsTemplateId, emailjsReceiver } = weddingConfig;
   const placeholders = ["YOUR_EMAILJS_PUBLIC_KEY", "YOUR_EMAILJS_SERVICE_ID", "YOUR_EMAILJS_TEMPLATE_ID"];
   return (
     emailjsPublicKey &&
     emailjsServiceId &&
     emailjsTemplateId &&
+    emailjsReceiver &&
     !placeholders.includes(emailjsPublicKey) &&
     !placeholders.includes(emailjsServiceId) &&
     !placeholders.includes(emailjsTemplateId)
@@ -365,10 +363,12 @@ function initForm() {
 
   if (!credentialsReady()) {
     console.warn(
-      "EmailJS is not configured yet. Replace YOUR_EMAILJS_PUBLIC_KEY, YOUR_EMAILJS_SERVICE_ID, and YOUR_EMAILJS_TEMPLATE_ID in js/script.js. Set the template recipient in the EmailJS dashboard."
+      "EmailJS is not configured yet. Replace the placeholder public key, service ID, and template ID in js/script.js."
     );
   } else if (window.emailjs) {
     window.emailjs.init({ publicKey: weddingConfig.emailjsPublicKey });
+  } else {
+    console.error("EmailJS SDK did not load. Check the EmailJS CDN script and network access.");
   }
 
   form.addEventListener("submit", async (event) => {
@@ -429,7 +429,11 @@ function initForm() {
       form.elements.guest_count.value = "1";
       setStatus("Thank you. Your message has been received.", "is-success");
     } catch (error) {
-      console.error("EmailJS send failed:", error);
+      console.error("EmailJS send failed:", {
+        status: error?.status,
+        text: error?.text,
+        message: error?.message
+      });
       setStatus("Your message could not be sent. Please try again.", "is-error");
     } finally {
       submitBtn.disabled = false;
