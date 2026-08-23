@@ -57,14 +57,14 @@ const weddingConfig = {
     }
   },
 
-  heroImage: "assets/images/hero.png",
+  heroImage: "assets/images/hero-photo.jpg",
   audioSrc: "assets/audio/wedding-music.mp3",
 
   /* Replace these three values with your EmailJS credentials */
   emailjsPublicKey: "WHkA8mmJsUks5JoI6",
   emailjsServiceId: "service_yj3pj8a",
   emailjsTemplateId: "template_aatnmta",
-  emailjsReceiver: "hnethinim@gmail.com"
+  emailjsReceiver: "lunajohannes12@gmail.com"
 };
 
 weddingConfig.namesDisplay = `${weddingConfig.groomName} & ${weddingConfig.brideName}`;
