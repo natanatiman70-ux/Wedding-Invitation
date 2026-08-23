@@ -9,7 +9,7 @@
  * 1. Create a service and template.
  * 2. Paste your PUBLIC key, service ID, and template ID below.
  * 3. Set the template "To Email" to the couple's inbox
- *    (default destination for this project: cliant@gmail.com).
+ *    (current test destination: yelewnethinim@gmail.com).
  *    Keep that address in the EmailJS dashboard — it is never
  *    shown on the visible website.
  * ============================================================
@@ -27,7 +27,7 @@ const weddingConfig = {
   heroBottomScript: "Our forever begins here",
   heroBottomNote: "We would be honored to celebrate\nthis beautiful day with you.",
   invitationAmharic:
-    "እንደ እግዚአብሄር ፍቃድ በ መስከረም 16-2019 ዓ.ም\nከምሽቱ 12 ሰዓት በ ሃያት ሬጀንሲ ባዘጋጀነው\nየእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ\nይሆኑ ዘንድ በማክበር ጋብዘኖታል",
+    "እንደ እግዚአብሄር ፍቃድ በ መስከረም 16-2019 ዓ.ም\nከምሽቱ 11:30 ሰዓት በ ሃያት ሬጀንሲ ባዘጋጀነው\nየእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ\nይሆኑ ዘንድ በማክበር ጋብዘኖታል",
   closingMessage: "Thank you for being part of\nthis beautiful beginning.",
 
   weddingDay: "26",
@@ -56,7 +56,7 @@ const weddingConfig = {
       mapEmbedUrl: "https://maps.google.com/maps?q=Hyatt%20Regency%20Addis%20Ababa&output=embed",
       directionsDestination: "Hyatt Regency Addis Ababa",
       directionsUrl: "",
-      time: "12:00 PM"
+      time: "11:30"
     }
   },
 
@@ -66,7 +66,8 @@ const weddingConfig = {
   /* Replace these three values with your EmailJS credentials */
   emailjsPublicKey: "YOUR_EMAILJS_PUBLIC_KEY",
   emailjsServiceId: "YOUR_EMAILJS_SERVICE_ID",
-  emailjsTemplateId: "YOUR_EMAILJS_TEMPLATE_ID"
+  emailjsTemplateId: "YOUR_EMAILJS_TEMPLATE_ID",
+  emailjsReceiver: "yelewnethinim@gmail.com"
 };
 
 weddingConfig.namesDisplay = `${weddingConfig.groomName} & ${weddingConfig.brideName}`;
@@ -415,6 +416,7 @@ function initForm() {
 
     try {
       await window.emailjs.send(weddingConfig.emailjsServiceId, weddingConfig.emailjsTemplateId, {
+        to_email: weddingConfig.emailjsReceiver,
         guest_name: guestName,
         guest_email: guestEmail,
         message,
