@@ -21,7 +21,7 @@ const weddingConfig = {
   groomInitial: "M",
   brideAmharic: "ሊዲያ",
   groomAmharic: "ሙሉሀብት",
-  namesAmharic: "ሊዲያ እና ሙሉሀብት",
+  namesAmharic: "ሙሉሀብት እና ሊዲያ",
   heroVerse: "ይሹሩን ሆይ፥ በሰማያት ላይ ለረድኤትህ፥ በደመናትም ላይ በታላቅነት እንደሚሄድ፡ እንደ እግዚአብሔር ያለ ማንም የለም።",
   heroVerseRef: "ዘዳግም 33:26",
   heroBottomScript: "Our forever begins here",
@@ -69,7 +69,7 @@ const weddingConfig = {
   emailjsTemplateId: "YOUR_EMAILJS_TEMPLATE_ID"
 };
 
-weddingConfig.namesDisplay = `${weddingConfig.brideName} & ${weddingConfig.groomName}`;
+weddingConfig.namesDisplay = `${weddingConfig.groomName} & ${weddingConfig.brideName}`;
 weddingConfig.weddingDateDisplay = `${weddingConfig.weddingDay} ${weddingConfig.weddingMonth} ${weddingConfig.weddingYear}`;
 weddingConfig.weddingDateLong = weddingConfig.gregorianDate;
 weddingConfig.venue = weddingConfig.locations.venue.name;
@@ -117,12 +117,12 @@ function applyConfig() {
 
   const footerNames = document.getElementById("footer-names");
   if (footerNames) {
-    footerNames.innerHTML = `${weddingConfig.brideAmharic} <span>&amp;</span> ${weddingConfig.groomAmharic}`;
+    footerNames.innerHTML = `${weddingConfig.groomAmharic} <span>&amp;</span> ${weddingConfig.brideAmharic}`;
   }
 
   const sealMonogram = document.querySelector(".seal-monogram");
   if (sealMonogram) {
-    sealMonogram.innerHTML = `${weddingConfig.brideInitial}<span>&amp;</span>${weddingConfig.groomInitial}`;
+    sealMonogram.innerHTML = `${weddingConfig.groomInitial}<span>&amp;</span>${weddingConfig.brideInitial}`;
   }
 }
 
