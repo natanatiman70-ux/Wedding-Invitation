@@ -382,7 +382,6 @@ function initForm() {
     const message = form.elements.message.value.trim();
     const attendingInput = form.querySelector('input[name="attending"]:checked');
     const attending = attendingInput ? attendingInput.value : "";
-    const guestCount = form.elements.guest_count.value;
 
     if (guestName.length < 2) {
       setStatus("Please enter your name.", "is-error");
@@ -415,19 +414,29 @@ function initForm() {
     setStatus("Sending your note…");
 
     try {
+      const rsvpMessage = [
+        "Wedding RSVP",
+        "Dear, you have received a new RSVP for your wedding invitation.",
+        "",
+        `Guest Name: ${guestName}`,
+        `Guest Email: ${guestEmail}`,
+        `Attendance: ${attending}`,
+        `Message: ${message}`,
+        "",
+        "Thank you. This RSVP was submitted through your wedding invitation website."
+      ].join("\n");
+
       await window.emailjs.send(weddingConfig.emailjsServiceId, weddingConfig.emailjsTemplateId, {
         to_email: weddingConfig.emailjsReceiver,
         guest_name: guestName,
         guest_email: guestEmail,
-        message,
+        message: rsvpMessage,
         attending,
-        guest_count: guestCount,
         wedding_date: weddingConfig.weddingDateDisplay,
         wedding_location: weddingConfig.weddingLocation
       });
       form.reset();
-      form.elements.guest_count.value = "1";
-      setStatus("Thank you. Your message has been received.", "is-success");
+      setStatus("Thank you. Your RSVP has been sent successfully.", "is-success");
     } catch (error) {
       const errorDetails = {
         status: error?.status,
