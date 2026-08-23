@@ -64,7 +64,7 @@ const weddingConfig = {
   emailjsPublicKey: "WHkA8mmJsUks5JoI6",
   emailjsServiceId: "service_yj3pj8a",
   emailjsTemplateId: "template_aatnmta",
-  emailjsReceiver: "natanimhabtamu25@gmail.com"
+  emailjsReceiver: "hnethinim@gmail.com"
 };
 
 weddingConfig.namesDisplay = `${weddingConfig.groomName} & ${weddingConfig.brideName}`;
