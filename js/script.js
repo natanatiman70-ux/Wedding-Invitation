@@ -57,7 +57,7 @@ const weddingConfig = {
     }
   },
 
-  heroImage: "assets/images/hero-photo.jpg",
+  heroImage: "assets/images/5792031448024944217_121.jpg",
   audioSrc: "assets/audio/wedding-music.mp3",
 
   /* Replace these three values with your EmailJS credentials */
