@@ -19,12 +19,12 @@ const weddingConfig = {
   brideAmharic: "ሊዲያ",
   groomAmharic: "ሙሉሀብት",
   namesAmharic: "ሙሉሀብት እና ሊዲያ",
-  heroVerse: "ይሹሩን ሆይ፥ በሰማያት ላይ ለረድኤትህ፥ በደመናትም ላይ በታላቅነት እንደሚሄድ፡ እንደ እግዚአብሔር ያለ ማንም የለም።",
+  heroVerse: "እግዚአብሔር መልካም ነገር አደረገልን ደስም አለን",
   heroVerseRef: "ዘዳግም 33:26",
-  heroBottomScript: "Our forever begins here",
-  heroBottomNote: "We would be honored to celebrate\nthis beautiful day with you.",
+  heroBottomScript: "ትልቁ የሕይወታችን ምዕራፍ",
+  heroBottomNote: "ይህን ልዩ ቀን ከእርስዎ ጋር ስናከብር\nበታላቅ ደስታ ነው።",
   invitationAmharic:
-    "እንደ እግዚአብሄር ፍቃድ በ መስከረም 16-2019 ዓ.ም\nከምሽቱ 11:30 ሰዓት በ Nifas Silk Lafto Technical and Professional Training College ባዘጋጀነው\nየእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ\nይሆኑ ዘንድ በማክበር ጋብዘኖታል",
+    "እንደ እግዚአብሔር ፍቃድ በ መስከረም 16-2019 ዓ.ም\nከምሽቱ 11:30 ሰዓት በ ፈለቀ ተካ የሠርግ አዳራሽ ባዘጋጀነው\nየእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ\nይሆኑ ዘንድ በማክበር ጋብዘኖታል",
   closingMessage: "Thank you for being part of\nthis beautiful beginning.",
 
   weddingDay: "26",
@@ -34,11 +34,11 @@ const weddingConfig = {
   ethiopianDay: "16",
   ethiopianMonth: "መስከረም",
   ethiopianYear: "2019 ዓ.ም",
-  gregorianDate: "September 26, 2026",
+  gregorianDate: "16 መስከረም, 2019 ዓ.ም",
   weddingIso: "2026-09-26T16:00:00",
   locations: {
     church: {
-      name: "Holy International Church",
+      name: "መንፈስ ቅዱስ ዓለም አቀፍ ቤተ ክርስቲያን |መገናኛ",
       address: "Megenagna, Addis Ababa, Ethiopia",
       image: "",
       mapEmbedUrl: "https://maps.google.com/maps?q=2R94%2BW76%20Holy%20International%20Church%20Megenagna%20Addis%20Ababa&output=embed",
@@ -47,12 +47,12 @@ const weddingConfig = {
       time: "9:00 AM – 11:00 AM"
     },
     venue: {
-      name: "Nifas Silk Lafto Technical and Professional Training College",
-      address: "Nifas Silk Lafto, Addis Ababa, Ethiopia",
+      name: "ፈለቀ ተካ የሠርግ አዳራሽ",
+      address: "Addis Ababa, Ethiopia",
       image: "assets/images/Nfas%20Silk%20Pace.jpg",
-      mapEmbedUrl: "https://maps.google.com/maps?q=Nifas%20Silk%20Lafto%20Technical%20and%20Professional%20Training%20College%2C%20Addis%20Ababa&output=embed",
-      directionsDestination: "Nifas Silk Lafto Technical and Professional Training College, Addis Ababa",
-      directionsUrl: "https://maps.app.goo.gl/zWB5bCzDb77Jyatp9",
+      mapEmbedUrl: "https://maps.google.com/maps?q=%E1%8D%88%E1%88%88%E1%89%80%20%E1%89%B0%E1%8A%AB%20%E1%8B%A8%E1%88%A0%E1%88%AD%E1%8C%8D%20%E1%8A%A0%E1%8B%B3%E1%88%AB%E1%88%BD%2C%20Addis%20Ababa&output=embed",
+      directionsDestination: "ፈለቀ ተካ የሠርግ አዳራሽ, Addis Ababa",
+      directionsUrl: "https://maps.app.goo.gl/MKo3i8z2iwa9sUpB7",
       time: "11:30"
     }
   },

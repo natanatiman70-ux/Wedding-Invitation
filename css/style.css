@@ -31,6 +31,14 @@
  font-display: swap;
 }
 
+@font-face {
+ font-family: "Geez Handwriting";
+ src: url("../assets/fonts/GeezHandwriting.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}
+
 /* =========================================================
  VARIABLES
 ========================================================= */
@@ -608,7 +616,7 @@ select {
 
  color: var(--blue-deep);
 
- font-family: var(--script);
+ font-family: "Geez Handwriting", var(--script), sans-serif;
 
  font-size: 33px;
 
@@ -3768,4 +3776,41 @@ body.invitation-unlocked .invitation-opening {
   .invitation-opening.is-opening::after { transform: translateX(-50%) translateY(-30%); opacity: .5; }
   .invitation-opening.is-opening .gold-seal,
   .invitation-opening.is-opening .opening-content { opacity: 0; }
+}
+
+/* Make only the newly converted Amharic text 10% larger. */
+.hero-amharic-title,
+.hero-name,
+.hero-amharic-verse p,
+.hero-amharic-verse span,
+.hero-bottom-note span,
+.hero-bottom-note p,
+#date-heading,
+#scratch-intro,
+.scratch-value-ethiopian strong,
+.scratch-value-ethiopian small,
+.revealed-dates strong,
+.revealed-dates span,
+#invited-heading,
+.invitation-small,
+.invitation-paper h3,
+.invitation-paper .invitation-amharic-message,
+#venue-heading,
+.location-tab,
+.venue-photo-caption strong,
+.venue-info-card h3,
+.venue-info-card [data-location-address],
+.venue-time,
+#rsvp-heading,
+.rsvp-intro,
+.rsvp-field label,
+#guest-name,
+#guest-email,
+#guest-message,
+.rsvp-option strong,
+.rsvp-option small,
+.rsvp-submit span,
+.footer-small,
+.footer-names {
+  zoom: 1.1;
 }
