@@ -24,7 +24,7 @@ const weddingConfig = {
   heroBottomScript: "Our forever begins here",
   heroBottomNote: "We would be honored to celebrate\nthis beautiful day with you.",
   invitationAmharic:
-    "እንደ እግዚአብሄር ፍቃድ በ መስከረም 16-2019 ዓ.ም\nከምሽቱ 11:30 ሰዓት በ ሃያት ሬጀንሲ ባዘጋጀነው\nየእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ\nይሆኑ ዘንድ በማክበር ጋብዘኖታል",
+    "እንደ እግዚአብሄር ፍቃድ በ መስከረም 16-2019 ዓ.ም\nከምሽቱ 11:30 ሰዓት በ Nifas Silk Lafto Technical and Professional Training College ባዘጋጀነው\nየእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ\nይሆኑ ዘንድ በማክበር ጋብዘኖታል",
   closingMessage: "Thank you for being part of\nthis beautiful beginning.",
 
   weddingDay: "26",
@@ -47,17 +47,17 @@ const weddingConfig = {
       time: "9:00 AM – 11:00 AM"
     },
     venue: {
-      name: "Hyatt Regency",
-      address: "Addis Ababa, Ethiopia",
-      image: "assets/images/venue.png",
-      mapEmbedUrl: "https://maps.google.com/maps?q=Hyatt%20Regency%20Addis%20Ababa&output=embed",
-      directionsDestination: "Hyatt Regency Addis Ababa",
-      directionsUrl: "",
+      name: "Nifas Silk Lafto Technical and Professional Training College",
+      address: "Nifas Silk Lafto, Addis Ababa, Ethiopia",
+      image: "assets/images/Nfas%20Silk%20Pace.jpg",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Nifas%20Silk%20Lafto%20Technical%20and%20Professional%20Training%20College%2C%20Addis%20Ababa&output=embed",
+      directionsDestination: "Nifas Silk Lafto Technical and Professional Training College, Addis Ababa",
+      directionsUrl: "https://maps.app.goo.gl/zWB5bCzDb77Jyatp9",
       time: "11:30"
     }
   },
 
-  heroImage: "assets/images/5792031448024944217_121.jpg",
+  heroImage: "assets/images/IMG_3663%20(1).jpg",
   audioSrc: "assets/audio/wedding-music.mp3",
 
   /* Replace these three values with your EmailJS credentials */
