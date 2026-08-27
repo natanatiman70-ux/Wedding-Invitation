@@ -14,8 +14,8 @@
 const weddingConfig = {
   brideName: "ሊዲያ",
   groomName: "ሙሉሀብት",
-  brideInitial: "L",
-  groomInitial: "M",
+  brideInitial: "ሊ",
+  groomInitial: "ሙ",
   brideAmharic: "ሊዲያ",
   groomAmharic: "ሙሉሀብት",
   namesAmharic: "ሙሉሀብት እና ሊዲያ",
@@ -120,7 +120,7 @@ function applyConfig() {
 
   const sealMonogram = document.querySelector(".seal-monogram");
   if (sealMonogram) {
-    sealMonogram.innerHTML = `${weddingConfig.groomInitial}<span>&amp;</span>${weddingConfig.brideInitial}`;
+    sealMonogram.innerHTML = `<span class="seal-letter">${weddingConfig.groomInitial}</span><span>&amp;</span><span class="seal-letter">${weddingConfig.brideInitial}</span>`;
   }
 }
 

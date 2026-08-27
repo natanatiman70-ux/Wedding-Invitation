@@ -39,6 +39,14 @@
  font-display: swap;
 }
 
+@font-face {
+ font-family: "Ketefa";
+ src: url("../assets/fonts/ketefa_301e6eef76.ttf") format("truetype");
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
+}
+
 /* =========================================================
  VARIABLES
 ========================================================= */
@@ -3742,6 +3750,12 @@ body.invitation-unlocked .invitation-opening {
   text-shadow: 0 1px 0 rgba(255,240,184,.48);
 }
 .seal-monogram span { margin-inline: 1px; font-size: .62em; opacity: .82; }
+.seal-monogram .seal-letter {
+  margin-inline: 0;
+  font-family: "Zamaric", serif;
+  font-size: 1em;
+  opacity: 1;
+}
 
 .opening-hint {
   margin-top: 58px;
@@ -3890,7 +3904,6 @@ body.invitation-unlocked .invitation-opening {
 .memory-photo-two {
  width: min(100%, 470px);
  padding: 14px;
- transform: rotate(1deg);
 }
 
 .memory-photo-two .memory-photo-frame {
@@ -3902,12 +3915,9 @@ body.invitation-unlocked .invitation-opening {
  object-position: center 48%;
 }
 
-.memory-photo-two.scroll-up {
- transform: translateY(26px) rotate(1deg);
-}
-
+.memory-photo-two.scroll-up,
 .memory-photo-two.scroll-up.is-visible {
- transform: translateY(0) rotate(1deg);
+ transform: none;
 }
 
 @media (min-width: 600px) {
