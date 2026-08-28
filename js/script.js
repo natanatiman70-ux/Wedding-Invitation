@@ -24,7 +24,7 @@ const weddingConfig = {
   heroBottomScript: "ትልቁ የሕይወታችን ምዕራፍ",
   heroBottomNote: "ይህን ልዩ ቀን ከእርስዎ ጋር ስናከብር\nበታላቅ ደስታ ነው።",
   invitationAmharic:
-    "እንደ እግዚአብሔር ፍቃድ በ መስከረም 16-2019 ዓ.ም\nከምሽቱ 11:30 ሰዓት በ ፈለቀ ተካ የሠርግ አዳራሽ ባዘጋጀነው\nየእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ\nይሆኑ ዘንድ በማክበር ጋብዘኖታል",
+    "እንደ እግዚአብሔር ፍቃድ በ መስከረም 16-2019 ዓ.ም\nከምሽቱ 11:30 ሰዓት በ ፈለቀ ተካ የሠርግ አዳራሽ ባዘጋጀነው\nየእራት ግብዣ ላይ በመገኘት የደስታችን ተካፋይ\nይሆኑ ዘንድ በአክብሮት ጋብዘንዎታል",
   closingMessage: "Thank you for being part of\nthis beautiful beginning.",
 
   weddingDay: "26",
