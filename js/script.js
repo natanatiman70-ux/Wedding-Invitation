@@ -12,14 +12,14 @@
  * ============================================================
  */
 const weddingConfig = {
-  brideName: "ሊዲያ",
-  groomName: "ሙሉሀብት",
+  brideName: "ሊዲያ ዮሐንስ",
+  groomName: "ሙሉሀብት መለሰ",
   brideInitial: "ሊ",
   groomInitial: "ሙ",
-  brideAmharic: "ሊዲያ",
-  groomAmharic: "ሙሉሀብት",
-  namesAmharic: "ሙሉሀብት እና ሊዲያ",
-  heroVerse: "እግዚአብሔር መልካም ነገር አደረገልን ደስም አለን",
+  brideAmharic: "ሊዲያ ዮሐንስ",
+  groomAmharic: "ሙሉሀብት መለሰ",
+  namesAmharic: "ሙሉሀብት መለሰ እና ሊዲያ ዮሐንስ",
+  heroVerse: "ይሹሩን ሆይ፥ በሰማያት ላይ ለረድኤትህ፥ በደመናትም ላይ በታላቅነት እንደሚሄድ፡ እንደ እግዚአብሔር ያለ ማንም የለም።",
   heroVerseRef: "ዘዳግም 33:26",
   heroBottomScript: "ትልቁ የሕይወታችን ምዕራፍ",
   heroBottomNote: "ይህን ልዩ ቀን ከእርስዎ ጋር ስናከብር\nበታላቅ ደስታ ነው።",
@@ -38,8 +38,8 @@ const weddingConfig = {
   weddingIso: "2026-09-26T16:00:00",
   locations: {
     church: {
-      name: "መንፈስ ቅዱስ ዓለም አቀፍ ቤተ ክርስቲያን |መገናኛ",
-      address: "Megenagna, Addis Ababa, Ethiopia",
+      name: "ሆሊይ ኢንተርናሽናል ቸርች",
+      address: "መገናኛ፣ አዲስ አበባ፣ ኢትዮጲያ",
       image: "",
       mapEmbedUrl: "https://maps.google.com/maps?q=2R94%2BW76%20Holy%20International%20Church%20Megenagna%20Addis%20Ababa&output=embed",
       directionsUrl: "https://maps.app.goo.gl/7KtiADEqBRWj5QaR9?g_st=it",
@@ -48,7 +48,7 @@ const weddingConfig = {
     },
     venue: {
       name: "ፈለቀ ተካ የሠርግ አዳራሽ",
-      address: "Addis Ababa, Ethiopia",
+      address: "አዲስ አበባ፣ ኢትዮጲያ",
       image: "assets/images/Nfas%20Silk%20Pace.jpg",
       mapEmbedUrl: "https://maps.google.com/maps?q=%E1%8D%88%E1%88%88%E1%89%80%20%E1%89%B0%E1%8A%AB%20%E1%8B%A8%E1%88%A0%E1%88%AD%E1%8C%8D%20%E1%8A%A0%E1%8B%B3%E1%88%AB%E1%88%BD%2C%20Addis%20Ababa&output=embed",
       directionsDestination: "ፈለቀ ተካ የሠርግ አዳራሽ, Addis Ababa",
