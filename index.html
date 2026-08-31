@@ -230,25 +230,16 @@
         </div>
 
         <div class="location-switcher scroll-up" role="tablist" aria-label="Wedding locations">
-          <button class="location-tab" id="church-tab" type="button" role="tab" aria-selected="false" aria-controls="church-location" data-location-tab="church">ሆሊይ ኢንተርናሽናል ቸርች</button>
+          <button class="location-tab" id="church-tab" type="button" role="tab" aria-selected="false" aria-controls="church-location" data-location-tab="church">Holy International Church</button>
            <button class="location-tab is-active" id="venue-tab" type="button" role="tab" aria-selected="true" aria-controls="venue-location" data-location-tab="venue">የሠርግ አዳራሽ</button>
         </div>
 
         <div class="location-panel" id="church-location" role="tabpanel" aria-labelledby="church-tab" data-location-panel="church" hidden>
-          <div class="venue-photo-wrap location-photo-wrap">
-            <img class="venue-photo location-photo" data-location-image="church" alt="Church ceremony location" width="1600" height="1000" loading="lazy" hidden />
-            <div class="location-photo-missing" data-location-image-missing="church">Church photo coming soon</div>
-            <div class="venue-photo-frame" aria-hidden="true"></div>
-            <div class="venue-photo-caption">
-              <span>Wedding Ceremony</span>
-              <strong data-location-name="church">ሆሊይ ኢንተርናሽናል ቸርች</strong>
-            </div>
-          </div>
-          <div class="venue-info-card">
+          <div class="venue-info-card scroll-up">
             <div class="venue-pin" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.6"></path><circle cx="12" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"></circle></svg>
             </div>
-              <h3 data-location-name="church">ሆሊይ ኢንተርናሽናል ቸርች</h3>
+            <h3 data-location-name="church">Holy International Church</h3>
             <p data-location-address="church">Church location to be confirmed</p>
             <p class="venue-time">የጋብቻ መርሃግብር · 9:00 AM – 11:00 AM</p>
             <a class="venue-map-button" data-location-directions="church" href="#" target="_blank" rel="noopener noreferrer">
@@ -259,43 +250,24 @@
         </div>
 
         <div class="location-panel is-active" id="venue-location" role="tabpanel" aria-labelledby="venue-tab" data-location-panel="venue">
-
-        <div class="venue-photo-wrap scroll-up">
-          <img
-            src="assets/images/Nfas%20Silk%20Pace.jpg"
-            alt="ፈለቀ ተካ የሠርግ አዳራሽ"
-            class="venue-photo"
-            width="1600"
-            height="1000"
-            loading="lazy"
-          />
-          <div class="venue-photo-frame" aria-hidden="true"></div>
-          <div class="venue-photo-caption">
-            <span>Wedding Reception</span>
-            <strong data-bind="venue">ፈለቀ ተካ የሠርግ አዳራሽ</strong>
+          <div class="venue-info-card scroll-up">
+            <div class="venue-pin" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
+                <circle cx="12" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+              </svg>
+            </div>
+            <h3 data-bind="venue">ፈለቀ ተካ የሠርግ አዳራሽ</h3>
+            <p data-bind="address">አዲስ አበባ፣ ኢትዮጲያ</p>
+            <p class="venue-time">የእራት ግብዣ · 11:30 ጀምሮ</p>
+            <a class="venue-map-button" id="directions-btn" href="#" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.7"></path>
+                <circle cx="12" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"></circle>
+              </svg>
+              <span>View On Google Maps</span>
+            </a>
           </div>
-        </div>
-
-        <div class="venue-info-card scroll-up">
-          <div class="venue-pin" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.6"></path>
-              <circle cx="12" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
-            </svg>
-          </div>
-              <h3 data-bind="venue">ፈለቀ ተካ የሠርግ አዳራሽ</h3>
-          <p data-bind="address">አዲስ አበባ፣ ኢትዮጲያ</p>
-          <p class="venue-time">የእራት ግብዣ ·መርሃግብር· 11:30 ጀምሮ</p>
-
-          <a class="venue-map-button" id="directions-btn" href="#" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.7"></path>
-              <circle cx="12" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"></circle>
-            </svg>
-            <span>View On Google Maps</span>
-          </a>
-        </div>
-
         </div>
 
         <div class="classic-map-card scroll-up">

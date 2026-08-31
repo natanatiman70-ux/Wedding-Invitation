@@ -1741,9 +1741,9 @@ select {
  position: relative;
 
  padding:
- 36px
+ 42px
  18px
- 62px;
+ 52px;
 
  overflow: hidden;
 
@@ -1755,7 +1755,7 @@ select {
  ),
  radial-gradient(
  circle at 90% 82%,
- rgba(222,229,234,.42),
+ rgba(222,229,234,.35),
  transparent 30%
  ),
  linear-gradient(
@@ -1803,7 +1803,7 @@ select {
 ========================================================= */
 
 .venue-heading {
- margin-bottom: 22px;
+ margin-bottom: 26px;
 
  text-align: center;
 }
@@ -1837,8 +1837,8 @@ select {
 .location-switcher {
  display: flex;
  justify-content: center;
- gap: 8px;
- margin: 0 auto 18px;
+ gap: 10px;
+ margin: 0 auto 24px;
 }
 
 .location-tab {
@@ -1874,14 +1874,15 @@ select {
 }
 
 .location-photo-missing {
- display: grid;
- place-items: center;
- width: 100%;
- height: 100%;
- color: rgba(255,255,255,.84);
- background: linear-gradient(135deg, #718796, #526979);
- font-family: var(--display);
- font-size: 24px;
+ display: none;
+}
+
+/* =========================================================
+ VENUE PHOTO WRAP (REMOVED)
+========================================================= */
+
+.venue-photo-wrap {
+ display: none;
 }
 
 .venue-divider {
@@ -2048,28 +2049,29 @@ select {
  width: 88%;
 
  margin:
- -1px
+ 18px
  auto
- 18px;
+ 24px;
 
  padding:
- 18px
- 16px;
+ 26px
+ 22px
+ 24px;
 
  border:
  1px solid
- rgba(183,163,132,.32);
+ rgba(183,163,132,.28);
 
- border-radius: 16px;
+ border-radius: 18px;
 
  background:
- rgba(255,255,255,.5);
+ rgba(255,255,255,.6);
 
  text-align: center;
 
  box-shadow:
- 0 9px 22px
- rgba(68,83,94,.06);
+ 0 8px 18px
+ rgba(68,83,94,.04);
 }
 
 .venue-pin {
@@ -2138,20 +2140,22 @@ select {
  width: 100%;
 
  padding:
- 14px;
+ 16px;
+
+ margin-top: 18px;
 
  border:
  1px solid
- rgba(183,163,132,.36);
+ rgba(183,163,132,.28);
 
  border-radius: 20px;
 
  background:
- rgba(255,255,255,.55);
+ rgba(255,255,255,.58);
 
  box-shadow:
- 0 13px 28px
- rgba(66,80,91,.08);
+ 0 10px 24px
+ rgba(66,80,91,.06);
 }
 
 /* map header */
@@ -2360,14 +2364,6 @@ select {
  font-size: 54px;
  }
 
- .venue-photo-wrap {
- height: 270px;
- }
-
- .venue-photo-caption strong {
- font-size: 32px;
- }
-
  .venue-info-card h3 {
  font-size: 29px;
  }
@@ -2388,10 +2384,6 @@ select {
 
 @media (min-width: 600px) {
 
- .venue-photo-wrap {
- height: 330px;
- }
-
  .map-frame {
  height: 330px;
  }
@@ -2406,38 +2398,39 @@ select {
  width: 92%;
 
  margin:
- 0
- auto;
+ 18px
+ auto
+ 24px;
 
  padding:
- 20px
- 18px
- 18px;
+ 26px
+ 22px
+ 24px;
 
  text-align: center;
 
  border:
  1px solid
- rgba(183,163,132,.30);
+ rgba(183,163,132,.28);
 
- border-radius: 17px;
+ border-radius: 18px;
 
  background:
- rgba(255,255,255,.50);
+ rgba(255,255,255,.6);
 
  box-shadow:
- 0 9px 22px
- rgba(68,83,94,.06);
+ 0 8px 18px
+ rgba(68,83,94,.04);
 }
 
 .venue-pin {
- width: 30px;
- height: 30px;
+ width: 32px;
+ height: 32px;
 
  margin:
  0
  auto
- 7px;
+ 8px;
 
  color: var(--gold);
 }
@@ -2449,7 +2442,7 @@ select {
 
  font-family: var(--display);
 
- font-size: 27px;
+ font-size: 28px;
 
  font-weight: 400;
 
@@ -2457,13 +2450,13 @@ select {
 }
 
 .venue-info-card p {
- margin-top: 6px;
+ margin-top: 7px;
 
- color: #405667;
+ color: #485a6a;
 
  font-size: 13px;
 
- line-height: 1.4;
+ line-height: 1.45;
 }
 
 /* =========================================================
@@ -2592,9 +2585,9 @@ select {
  position: relative;
 
  padding:
- 38px
+ 42px
  18px
- 58px;
+ 52px;
 
  overflow: hidden;
 
@@ -2606,7 +2599,7 @@ select {
  ),
  radial-gradient(
  circle at 92% 84%,
- rgba(221,229,234,.42),
+ rgba(221,229,234,.36),
  transparent 30%
  ),
  linear-gradient(
@@ -3007,7 +3000,7 @@ select {
  position: relative;
 
  padding:
- 58px
+ 52px
  20px
  46px;
 
@@ -3798,11 +3791,11 @@ body.invitation-unlocked .invitation-opening {
 
 .memory-photos-section {
  position: relative;
- padding: 58px 18px 64px;
+ padding: 56px 18px 58px;
  overflow: hidden;
  background:
   radial-gradient(circle at 10% 18%, rgba(255,255,255,.96), transparent 28%),
-  radial-gradient(circle at 92% 82%, rgba(222,229,234,.38), transparent 30%),
+  radial-gradient(circle at 92% 82%, rgba(222,229,234,.35), transparent 30%),
   linear-gradient(180deg, #f4f1ec, #f8f5f0);
 }
 
@@ -3913,6 +3906,7 @@ body.invitation-unlocked .invitation-opening {
 
 .memory-photo-two .memory-photo-frame img {
  object-position: center 48%;
+ filter: grayscale(100%);
 }
 
 .memory-photo-two.scroll-up,

@@ -38,7 +38,7 @@ const weddingConfig = {
   weddingIso: "2026-09-26T16:00:00",
   locations: {
     church: {
-      name: "ሆሊይ ኢንተርናሽናል ቸርች",
+      name: "Holy International Church",
       address: "መገናኛ፣ አዲስ አበባ፣ ኢትዮጲያ",
       image: "",
       mapEmbedUrl: "https://maps.google.com/maps?q=2R94%2BW76%20Holy%20International%20Church%20Megenagna%20Addis%20Ababa&output=embed",
