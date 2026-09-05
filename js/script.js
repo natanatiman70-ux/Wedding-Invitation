@@ -64,7 +64,8 @@ const weddingConfig = {
   emailjsPublicKey: "WHkA8mmJsUks5JoI6",
   emailjsServiceId: "service_yj3pj8a",
   emailjsTemplateId: "template_aatnmta",
-  emailjsReceiver: "lunajohannes12@gmail.com"
+  emailjsReceiver: "lunajohannes12@gmail.com",
+  emailjsSecondaryReceiver: "muluhabtmelese32@gmail.com"
 };
 
 weddingConfig.namesDisplay = `${weddingConfig.groomName} & ${weddingConfig.brideName}`;
@@ -427,7 +428,7 @@ function initForm() {
       ].join("\n");
 
       await window.emailjs.send(weddingConfig.emailjsServiceId, weddingConfig.emailjsTemplateId, {
-        to_email: weddingConfig.emailjsReceiver,
+        to_email: [weddingConfig.emailjsReceiver, weddingConfig.emailjsSecondaryReceiver].join(", "),
         guest_name: guestName,
         guest_email: guestEmail,
         message: rsvpMessage,
